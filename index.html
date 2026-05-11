@@ -1,132 +1,258 @@
-<!-- index.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Suhas Dalve | Snowflake Data Engineer</title>
-  <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
+export default function Portfolio() {
+  return (
+    <div className="min-h-screen bg-slate-950 text-white font-sans">
+      {/* HERO SECTION */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-blue-500/10 to-indigo-500/20 blur-3xl"></div>
 
-  <header class="hero">
-    <div class="container">
-      <h1>Suhas Dalve</h1>
-      <h2>Snowflake Data Engineer</h2>
-      <p>
-        Snowflake Data Engineer with 4+ years of experience in ETL/ELT pipelines,
-        AWS cloud solutions, Apache Airflow, Python, SQL, and PySpark.
-      </p>
+        <div className="relative max-w-7xl mx-auto px-6 py-24 lg:py-32">
+          <div className="grid lg:grid-cols-2 gap-14 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-400/20 rounded-full px-4 py-2 mb-6">
+                <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></div>
+                <span className="text-cyan-300 text-sm">Open to Data Engineering Opportunities</span>
+              </div>
 
-      <div class="buttons">
-        <a href="mailto:suhas47dalve@gmail.com" class="btn">Contact Me</a>
-        <a href="https://github.com/" target="_blank" class="btn-outline">GitHub</a>
-        <a href="https://linkedin.com/" target="_blank" class="btn-outline">LinkedIn</a>
-      </div>
-    </div>
-  </header>
+              <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+                Suhas <span className="text-cyan-400">Dalve</span>
+              </h1>
 
-  <section class="section">
-    <div class="container">
-      <h3>About Me</h3>
-      <p>
-        Experienced in building scalable cloud-based data engineering solutions using Snowflake,
-        AWS, Apache Airflow, and Python. Skilled in real-time data pipelines, workflow automation,
-        data warehousing, CDC processing, and Snowflake optimization.
-      </p>
-    </div>
-  </section>
+              <h2 className="mt-5 text-2xl md:text-3xl text-slate-300 font-semibold">
+                Snowflake Data Engineer
+              </h2>
 
-  <section class="section gray">
-    <div class="container">
-      <h3>Technical Skills</h3>
+              <p className="mt-6 text-slate-400 text-lg leading-8 max-w-2xl">
+                Snowflake Data Engineer with 4+ years of experience designing scalable ETL/ELT pipelines,
+                cloud-native architectures, and real-time data engineering solutions using AWS,
+                Apache Airflow, Python, SQL, and PySpark.
+              </p>
 
-      <div class="skills-grid">
+              <div className="flex flex-wrap gap-4 mt-10">
+                <a
+                  href="mailto:suhas47dalve@gmail.com"
+                  className="bg-cyan-400 text-slate-950 px-7 py-4 rounded-2xl font-semibold hover:scale-105 transition"
+                >
+                  Contact Me
+                </a>
 
-        <div class="card">
-          <h4>Cloud & Platforms</h4>
-          <p>Snowflake, AWS, Databricks, InfoWorks</p>
+                <a
+                  href="https://github.com"
+                  target="_blank"
+                  className="border border-slate-700 hover:border-cyan-400 px-7 py-4 rounded-2xl font-semibold transition"
+                >
+                  GitHub
+                </a>
+
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  className="border border-slate-700 hover:border-cyan-400 px-7 py-4 rounded-2xl font-semibold transition"
+                >
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="absolute inset-0 bg-cyan-500/20 blur-3xl rounded-full"></div>
+
+              <div className="relative bg-white/5 border border-white/10 backdrop-blur-xl rounded-3xl p-8 shadow-2xl">
+                <div className="flex items-center justify-between mb-8">
+                  <h3 className="text-2xl font-bold">Tech Stack</h3>
+                  <div className="bg-cyan-400/20 text-cyan-300 px-3 py-1 rounded-full text-sm">
+                    4+ Years
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    'Snowflake',
+                    'AWS',
+                    'Apache Airflow',
+                    'Python',
+                    'SQL',
+                    'PySpark',
+                    'Databricks',
+                    'Unix/Linux'
+                  ].map((skill) => (
+                    <div
+                      key={skill}
+                      className="bg-slate-900/70 border border-slate-800 rounded-2xl p-4 hover:border-cyan-400 transition"
+                    >
+                      <p className="font-medium">{skill}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section className="max-w-7xl mx-auto px-6 py-20">
+        <div className="grid lg:grid-cols-3 gap-8">
+          <div className="lg:col-span-1">
+            <p className="text-cyan-400 font-semibold uppercase tracking-widest text-sm">
+              About Me
+            </p>
+            <h2 className="mt-4 text-4xl font-bold leading-tight">
+              Building Modern Data Platforms
+            </h2>
+          </div>
+
+          <div className="lg:col-span-2 bg-white/5 border border-white/10 rounded-3xl p-8">
+            <p className="text-slate-300 leading-8 text-lg">
+              Experienced in building enterprise-scale real-time and batch data pipelines using Snowflake,
+              AWS Glue, Apache Airflow, Lambda, and Python. Skilled in CDC processing,
+              workflow automation, Snowflake optimization, and cloud-native data engineering.
+              Passionate about designing scalable and reliable architectures for analytics and reporting.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* EXPERIENCE */}
+      <section className="max-w-7xl mx-auto px-6 py-20">
+        <div className="flex items-center justify-between mb-14">
+          <div>
+            <p className="text-cyan-400 font-semibold uppercase tracking-widest text-sm">
+              Experience
+            </p>
+            <h2 className="text-4xl font-bold mt-3">Professional Journey</h2>
+          </div>
         </div>
 
-        <div class="card">
-          <h4>AWS Services</h4>
-          <p>S3, Glue, Lambda, EMR, Redshift, CloudWatch</p>
+        <div className="bg-gradient-to-br from-slate-900 to-slate-800 border border-white/10 rounded-3xl p-8 lg:p-12">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5">
+            <div>
+              <h3 className="text-3xl font-bold">Amdocs India</h3>
+              <p className="text-cyan-400 mt-2 text-lg">Snowflake Data Engineer</p>
+            </div>
+
+            <div className="bg-cyan-500/10 border border-cyan-400/20 px-5 py-3 rounded-2xl text-cyan-300">
+              Jul 2022 – Present
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 mt-10">
+            {[
+              'Designed scalable Snowflake pipelines using Snowpipe, Streams & Tasks.',
+              'Developed ETL/ELT workflows using AWS Glue, Airflow, Python, and SQL.',
+              'Optimized Snowflake warehouse performance reducing query execution by 40%.',
+              'Automated 30+ operational workflows reducing manual effort by 50%.',
+              'Implemented cloud-native data solutions using AWS services.',
+              'Supported enterprise-scale telecom Data Warehouse applications.'
+            ].map((item) => (
+              <div
+                key={item}
+                className="bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-cyan-400 transition"
+              >
+                <p className="text-slate-300">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PROJECTS */}
+      <section className="max-w-7xl mx-auto px-6 py-20">
+        <div className="mb-14">
+          <p className="text-cyan-400 font-semibold uppercase tracking-widest text-sm">
+            Projects
+          </p>
+          <h2 className="text-4xl font-bold mt-3">Featured Projects</h2>
         </div>
 
-        <div class="card">
-          <h4>Programming</h4>
-          <p>Python, SQL, PL/SQL, Shell Scripting, PySpark</p>
+        <div className="grid lg:grid-cols-2 gap-8">
+          <div className="group bg-gradient-to-br from-slate-900 to-slate-800 border border-white/10 rounded-3xl p-8 hover:border-cyan-400 transition duration-300">
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-2xl font-bold">Real-Time Customer Pipeline</h3>
+              <div className="text-cyan-400">100M+ Records</div>
+            </div>
+
+            <p className="text-slate-400 leading-8">
+              Designed and implemented a real-time Snowflake data pipeline processing 100M+
+              customer transactions using Snowpipe, AWS S3, Streams & Tasks, Airflow,
+              Lambda, and Dynamic Tables.
+            </p>
+
+            <div className="flex flex-wrap gap-3 mt-8">
+              {['Snowflake', 'AWS', 'Airflow', 'Python', 'SQL'].map((tech) => (
+                <span
+                  key={tech}
+                  className="bg-cyan-500/10 text-cyan-300 px-4 py-2 rounded-full text-sm"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="group bg-gradient-to-br from-slate-900 to-slate-800 border border-white/10 rounded-3xl p-8 hover:border-cyan-400 transition duration-300">
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-2xl font-bold">Batch ETL Migration</h3>
+              <div className="text-cyan-400">Enterprise ETL</div>
+            </div>
+
+            <p className="text-slate-400 leading-8">
+              Built enterprise ETL migration pipelines using PySpark, Airflow, Oracle,
+              and Snowflake for large-scale data transformation, validation, and automation.
+            </p>
+
+            <div className="flex flex-wrap gap-3 mt-8">
+              {['PySpark', 'Oracle', 'Snowflake', 'Airflow', 'AWS'].map((tech) => (
+                <span
+                  key={tech}
+                  className="bg-cyan-500/10 text-cyan-300 px-4 py-2 rounded-full text-sm"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CERTIFICATIONS */}
+      <section className="max-w-7xl mx-auto px-6 py-20">
+        <div className="mb-14">
+          <p className="text-cyan-400 font-semibold uppercase tracking-widest text-sm">
+            Certifications
+          </p>
+          <h2 className="text-4xl font-bold mt-3">Professional Certifications</h2>
         </div>
 
-        <div class="card">
-          <h4>Tools</h4>
-          <p>Apache Airflow, Git, CI/CD, TWS, Crontab</p>
+        <div className="grid md:grid-cols-3 gap-6">
+          {[
+            'Snowflake SnowPro Core',
+            'AWS Certified Data Engineer',
+            'AWS Cloud Practitioner'
+          ].map((cert) => (
+            <div
+              key={cert}
+              className="bg-white/5 border border-white/10 rounded-3xl p-8 text-center hover:border-cyan-400 transition"
+            >
+              <div className="text-5xl mb-5">🏆</div>
+              <h3 className="text-xl font-semibold">{cert}</h3>
+            </div>
+          ))}
         </div>
+      </section>
 
-      </div>
-    </div>
-  </section>
+      {/* FOOTER */}
+      <footer className="border-t border-white/10 mt-10">
+        <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col lg:flex-row items-center justify-between gap-4">
+          <div>
+            <h3 className="text-2xl font-bold">Suhas Dalve</h3>
+            <p className="text-slate-400 mt-2">Snowflake Data Engineer</p>
+          </div>
 
-  <section class="section">
-    <div class="container">
-      <h3>Professional Experience</h3>
-
-      <div class="timeline">
-
-        <div class="timeline-item">
-          <h4>Amdocs India</h4>
-          <span>Snowflake Data Engineer | Jul 2022 - Present</span>
-
-          <ul>
-            <li>Designed scalable Snowflake ETL pipelines using Snowpipe, Streams & Tasks.</li>
-            <li>Developed AWS + Airflow based cloud-native data engineering solutions.</li>
-            <li>Optimized Snowflake query performance reducing execution time by 40%.</li>
-            <li>Automated 30+ workflows reducing manual effort by 50%.</li>
-          </ul>
+          <div className="text-slate-500 text-sm">
+            © 2026 All Rights Reserved.
+          </div>
         </div>
-
-      </div>
+      </footer>
     </div>
-  </section>
-
-  <section class="section gray">
-    <div class="container">
-      <h3>Projects</h3>
-
-      <div class="project-card">
-        <h4>Real-Time Customer Data Pipeline</h4>
-        <p>
-          Built real-time Snowflake data pipeline processing 100M+ records using
-          Snowpipe, AWS S3, Streams & Tasks, Airflow, and Lambda.
-        </p>
-      </div>
-
-      <div class="project-card">
-        <h4>Batch ETL Data Migration Pipeline</h4>
-        <p>
-          Migrated Oracle and Teradata workloads into Snowflake using PySpark,
-          Airflow, and automated ETL workflows.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h3>Certifications</h3>
-
-      <ul class="certs">
-        <li>Snowflake SnowPro Core Certification (2025)</li>
-        <li>AWS Certified Data Engineer Associate (2024)</li>
-        <li>AWS Certified Cloud Practitioner (2024)</li>
-      </ul>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 Suhas Dalve | Snowflake Data Engineer</p>
-  </footer>
-
-</body>
-</html>
+  )
+}
